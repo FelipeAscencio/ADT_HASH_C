@@ -432,7 +432,7 @@ void iterar_hash_entero()
 
 int main()
 {
-	pa2m_nuevo_grupo(
+	pruebas_nuevo_grupo(
 		"\n======================== XXX ========================");
 	crear_hash_capacidad_mayor();
 	crear_hash_capacidad_menor();
@@ -463,5 +463,5 @@ int main()
 	iterar_auxiliar_nulo();
 	iterar_hash_entero();
 
-	return pa2m_mostrar_reporte();
+	return pruebas_mostrar_reporte();
 }
