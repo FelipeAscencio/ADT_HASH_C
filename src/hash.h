@@ -25,21 +25,19 @@ hash_t *hash_crear(size_t capacidad);
  *
  * Si la clave no existía y anterior no es NULL, se almacena NULL en *anterior.
  *
- * La función almacena una copia de la clave provista por el usuario,
+ * La función almacena una copia de la clave provista por el usuario.
  *
- * Nota para los alumnos: Recordar que si insertar un elemento provoca
- * que el factor de carga exceda cierto umbral, SE DEBE AJUSTAR EL
- * TAMAÑO DE LA TABLA PARA EVITAR FUTURAS COLISIONES.
+ * Si es necesario, hace el rehasheo.
  *
  * Devuelve el hash si pudo guardar el elemento o NULL si no pudo.
  */
 hash_t *hash_insertar(hash_t *hash, const char *clave, void *elemento,
-		      void **anterior);
+                      void **anterior);
 
 /*
  * Quita un elemento del hash y lo devuelve.
  *
- * Si no encuentra el elemento o en caso de error devuelve NULL
+ * Si no encuentra el elemento, o en caso de error, devuelve NULL.
  */
 void *hash_quitar(hash_t *hash, const char *clave);
 
@@ -75,7 +73,7 @@ void hash_destruir_todo(hash_t *hash, void (*destructor)(void *));
 
 /*
  * Recorre cada una de las claves almacenadas en la tabla de hash e invoca a la
- * función f, pasandole como parámetros la clave, el valor asociado a la clave y
+ * función "f", pasandole como parámetros la clave, valor asociado a la clave y
  * el puntero auxiliar.
  *
  * Mientras que queden mas claves o la funcion retorne true, la
@@ -88,7 +86,7 @@ void hash_destruir_todo(hash_t *hash, void (*destructor)(void *));
  *
  */
 size_t hash_con_cada_clave(hash_t *hash,
-			   bool (*f)(const char *clave, void *valor, void *aux),
-			   void *aux);
+                           bool (*f)(const char *clave, void *valor, void *aux),
+                           void *aux);
 
 #endif /* __HASH_H__ */
