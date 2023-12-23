@@ -20,6 +20,8 @@ For the implementación of the dictionary, i used a open "HASH TABLE" (closed ad
 
 For my "HASH TABLE" implementation I chose to use nodes, with the "KEY/VALUE" pair inside the node and a pointer to the next node.
 
+In this implementation the values ​​can only be integers, and the keys can only be character strings.
+
 I used a "HASH" structure that contains the dynamic vector to insert the nodes, a variable with the current capacity of the table and a counter of the number of nodes inserted to know when to do "REHASH".
 
 The collisions, since we have to do an "OPEN HASH TABLE", that is, "CLOSED ADDRESSING", we are going to concatenate them.
