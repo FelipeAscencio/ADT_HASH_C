@@ -8,9 +8,21 @@ bash .tests/test.sh
 
 ---
 
+## Introduction
+
+The idea of ​​the project was to be able to provide the user with the implementation of a dictionary (in this case using a hash table), with all its corresponding functions and in a 100% functional way.
+
+In particular, the idea of ​​dynamic memory management (ensuring not to lose any byte of memory in the process) and the correct management of pointers, so as not to have invalid memory accesses, or reference losses in the process, helped me a lot to continue working. the process that would then generate memory leaks.
+
+The end user would be provided with the compiled .h and .o so that they can use the library with the knowledge of all the pre and post conditions of the functions, but obviously without the implementation code.
+
+Additionally, in the repository there is my own test library, with which in the example file I test the operation of the dictionary.
+
+I use this library with the idea of ​​visually making it easier for anyone who wants to see how it works to read the tests and whether they work correctly or incorrectly.
+
 ## Functioning
 
-##  Explanation of "Implementation and design"
+###  Explanation of "Implementation and design"
 
 First of all, this was a project for the university, so the code is written in spanish.
 
@@ -28,7 +40,7 @@ The collisions, since we have to do an "OPEN HASH TABLE", that is, "CLOSED ADDRE
 
 And we do this by joining the nodes together when they collide in the same position of the dynamic vector of the table.
 
-##  HASH function used
+###  HASH function used
 
 The "HASH" function I used in my tests is "DJB2".
 
