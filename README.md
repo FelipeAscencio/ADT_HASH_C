@@ -12,7 +12,7 @@ bash .tests/test.sh
 
 The idea of ​​the project was to be able to provide the user with the implementation of a dictionary (in this case using a hash table), with all its corresponding functions and in a 100% functional way.
 
-In particular, the idea of ​​dynamic memory management (ensuring not to lose any byte of memory in the process) and the correct management of pointers, so as not to have invalid memory accesses, or reference losses in the process, helped me a lot to continue working. the process that would then generate memory leaks.
+In particular, the idea of ​​dynamic memory management (ensuring not to lose any byte of memory in the process) and the correct management of pointers, so as not to have invalid memory accesses, or reference losses in the process.
 
 The end user would be provided with the compiled .h and .o so that they can use the library with the knowledge of all the pre and post conditions of the functions, but obviously without the implementation code.
 
