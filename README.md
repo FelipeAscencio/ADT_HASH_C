@@ -6,8 +6,6 @@
 bash .tests/test.sh
 ```
 
----
-
 ## Introduction
 
 The idea of ​​the project was to be able to provide the user with the implementation of a dictionary (in this case using a hash table), with all its corresponding functions and in a 100% functional way.
@@ -64,7 +62,7 @@ What this function does is pass the received string (in this case, the key of my
 
 ---
 
-## Testing
+# Testing
 
 For test the code, i implemented my own tests.
 
@@ -74,7 +72,7 @@ Also add the analysis with valgrind to see if you have memory leaks, since the p
 
 ---
 
-## Functions
+# Functions
 
 First of all, it is important to clarify something, in order to reduce the amount of information in the explanations below, corresponding to each function, the best case of its execution is contemplated.
 
@@ -82,7 +80,7 @@ But, each function has all its respective validations to, in case of error, term
 
 The pre and post conditions of each function are specified in the corresponding ".h" file.
 
-### Computational complexity
+## Computational complexity
 
 I am going to make a list of the computational complexities in "BIG O" notation of each implemented function.
 
@@ -111,5 +109,3 @@ For the "hash_insertar", "hash_eliminar", "hash_buscar" and "hash_contiene" func
 We take the optimal case of "HASH" implementation, where the number of "KEY/VALUE" pairs saved is much larger than all the elements that can be concatenated in the same position of the table, making the complexity of this be O(1).
 
 But it is important to remember that, for example, if all keys are entered that when passed through the "HASH" function end up in the same position in the table, they are concatenated together giving rise to a list, and in which case this operation would go from having a complexity of O(1) to O(n), so if there is a case where this function could be O(n), but we consider that the optimal case that we handle and are going to take is O(1 ).
-
----
